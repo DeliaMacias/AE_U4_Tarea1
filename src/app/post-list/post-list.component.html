@@ -1,0 +1,40 @@
+
+<h2 >  USUARIOS </h2>
+
+<hr>
+<div *ngFor="let pos of posts; index as Id">
+    <h3>{{pos.name}}</h3>
+    <br>
+    <img src="{{pos.img}}">
+    <p><strong> Descripción:</strong>  </p>
+    <p>{{pos.description}}</p>
+
+    <div [ngSwitch]= pos.rank>
+        <div *ngSwitchCase=1>
+            <p class="clasificacion">  <strong>Calificación:</strong>  
+                    <label> ★ </label>
+            </p>
+        </div>
+        <div *ngSwitchCase=2>
+            <p class="clasificacion">  <strong>Calificación:</strong>  
+                    <label> ★★</label>
+            </p>
+        </div>
+        <div *ngSwitchCase=3>
+            <p class="clasificacion">  <strong>Calificación:</strong>  
+                    <label> ★★★ </label>
+            </p>
+        </div>
+        <div *ngSwitchCase=4>
+            <p class="clasificacion">  <strong>Calificación:</strong>  
+                 <label> ★★★★ </label>
+            </p>
+        </div>
+        <div *ngSwitchCase=5>
+            <p class="clasificacion">  <strong>Calificación:</strong>   
+                <label> ★★★★★ </label>
+            </p>
+        </div>
+    </div>
+    <br>
+</div>
